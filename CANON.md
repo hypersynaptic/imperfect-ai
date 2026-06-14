@@ -201,7 +201,7 @@ Every revision must be justified.
 
 The canon exists as a living document maintained by the community.
 
-Version 1.0 is not the destination.
+Version 1.1 is not the destination.
 
 It is merely the current approximation.
 
