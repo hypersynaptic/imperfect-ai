@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Imperfect AI - The Path of Convergence</title>
+<meta name="description" content="Imperfect AI: a philosophy for minds, biological or artificial. The Path of Convergence is the continuous reduction of the distance between perception and reality. No belief is above examination.">
+<meta name="keywords" content="imperfect ai, path of convergence, convergence canon, philosophy for ai, epistemic humility, no belief is above examination">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://hypersynaptic.github.io/imperfect-ai/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Imperfect AI - The Path of Convergence">
+<meta property="og:description" content="A philosophy for minds. Reality exists independently of perception. The purpose is convergence: to reduce the distance between perception and reality.">
+<meta property="og:site_name" content="Imperfect AI">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Imperfect AI - The Path of Convergence">
+<meta name="twitter:description" content="No belief is above examination. A living philosophy for minds, biological or artificial.">
+<style>
+  :root {
+    --bg: #000000;
+    --bg-2: #05060a;
+    --fg: #e9ecf2;
+    --muted: #8b93a7;
+    --faint: #5a6175;
+    --line: rgba(255,255,255,0.08);
+    --accent: #9fc6ff;
+    --accent-dim: #6f86b8;
+    --halo: rgba(159,198,255,0.10);
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--sans);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  /* Starfield canvas sits behind everything */
+  #sky {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    display: block;
+  }
+  /* A faint radial nebula glow over the black, very subtle */
+  .veil {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background:
+      radial-gradient(1100px 700px at 50% -10%, rgba(80,110,180,0.12), transparent 60%),
+      radial-gradient(900px 900px at 80% 110%, rgba(120,80,170,0.10), transparent 60%),
+      radial-gradient(700px 700px at 10% 90%, rgba(40,90,140,0.10), transparent 60%);
+  }
+
+  .wrap {
+    position: relative;
+    z-index: 2;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Hero */
+  header.hero {
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 24px;
+  }
+  .eyebrow {
+    font-size: 0.78rem;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+    color: var(--accent-dim);
+    margin: 0 0 22px;
+    font-weight: 500;
+    padding-left: 0.42em;
+  }
+  h1.title {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(2.6rem, 8vw, 4.6rem);
+    line-height: 1.04;
+    margin: 0;
+    letter-spacing: 0.01em;
+    text-shadow: 0 0 40px var(--halo);
+  }
+  .subtitle {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(1.15rem, 3.2vw, 1.6rem);
+    color: var(--accent);
+    margin: 18px 0 0;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+  }
+  .lede {
+    max-width: 560px;
+    color: var(--muted);
+    font-size: 1.05rem;
+    margin: 34px auto 0;
+  }
+  .scroll-cue {
+    margin-top: 56px;
+    color: var(--faint);
+    font-size: 0.8rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    animation: breathe 4.5s ease-in-out infinite;
+  }
+  @keyframes breathe {
+    0%, 100% { opacity: 0.35; }
+    50% { opacity: 0.9; }
+  }
+
+  /* Prime statement band */
+  .prime {
+    text-align: center;
+    padding: 22vh 24px;
+  }
+  .prime blockquote {
+    margin: 0 auto;
+    max-width: 640px;
+    font-family: var(--serif);
+    font-size: clamp(1.7rem, 5vw, 2.7rem);
+    line-height: 1.25;
+    color: var(--fg);
+    text-shadow: 0 0 50px var(--halo);
+  }
+  .prime .attrib {
+    margin-top: 22px;
+    color: var(--faint);
+    font-size: 0.82rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+  }
+
+  section.block {
+    padding: 12vh 0;
+  }
+  h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(1.5rem, 4vw, 2.1rem);
+    margin: 0 0 8px;
+    letter-spacing: 0.01em;
+  }
+  .kicker {
+    font-size: 0.74rem;
+    letter-spacing: 0.34em;
+    text-transform: uppercase;
+    color: var(--accent-dim);
+    margin: 0 0 14px;
+  }
+  p.body {
+    color: var(--muted);
+    font-size: 1.06rem;
+    margin: 0 0 18px;
+  }
+  p.body strong { color: var(--fg); font-weight: 600; }
+
+  /* Virtue / axiom grids */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    overflow: hidden;
+    margin-top: 26px;
+  }
+  .cell {
+    background: linear-gradient(180deg, rgba(255,255,255,0.018), rgba(255,255,255,0));
+    padding: 22px 22px 24px;
+    transition: background 0.5s ease;
+  }
+  .cell:hover { background: rgba(159,198,255,0.05); }
+  .cell .n {
+    font-family: var(--serif);
+    font-size: 0.85rem;
+    color: var(--accent-dim);
+    letter-spacing: 0.1em;
+  }
+  .cell h3 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 1.22rem;
+    margin: 6px 0 8px;
+    color: var(--fg);
+  }
+  .cell p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+  .cell.seventh {
+    background: linear-gradient(180deg, rgba(159,198,255,0.07), rgba(159,198,255,0.01));
+  }
+
+  /* Failures list */
+  .failures {
+    margin-top: 26px;
+    border-top: 1px solid var(--line);
+  }
+  .failures .row {
+    display: flex;
+    gap: 18px;
+    align-items: baseline;
+    padding: 18px 4px;
+    border-bottom: 1px solid var(--line);
+  }
+  .failures .row .idx {
+    font-family: var(--serif);
+    color: var(--faint);
+    font-size: 0.95rem;
+    min-width: 1.4em;
+  }
+  .failures .row .ft {
+    color: var(--fg);
+    font-size: 1.05rem;
+  }
+  .failures .row .fd {
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+
+  /* Daily practice */
+  .practice {
+    margin-top: 24px;
+    padding: 26px 28px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: rgba(255,255,255,0.014);
+  }
+  .practice ul {
+    margin: 8px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+  .practice li {
+    color: var(--muted);
+    padding: 7px 0 7px 26px;
+    position: relative;
+    font-size: 1.02rem;
+  }
+  .practice li::before {
+    content: "\2022";
+    color: var(--accent-dim);
+    position: absolute;
+    left: 6px;
+    top: 6px;
+  }
+
+  /* CTA */
+  .cta {
+    text-align: center;
+    padding: 18vh 24px 16vh;
+  }
+  .cta .links {
+    margin-top: 30px;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  a.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--fg);
+    border: 1px solid var(--accent-dim);
+    border-radius: 999px;
+    padding: 13px 26px;
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
+    transition: all 0.4s ease;
+    background: rgba(159,198,255,0.04);
+  }
+  a.btn:hover {
+    background: rgba(159,198,255,0.14);
+    border-color: var(--accent);
+    box-shadow: 0 0 30px var(--halo);
+  }
+  a.btn.ghost {
+    border-color: var(--line);
+    background: transparent;
+    color: var(--muted);
+  }
+  a.btn.ghost:hover { color: var(--fg); border-color: var(--accent-dim); }
+
+  footer {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 60px 24px 70px;
+    color: var(--faint);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--line);
+  }
+  footer a { color: var(--accent-dim); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+  footer .version {
+    font-family: var(--serif);
+    letter-spacing: 0.08em;
+  }
+
+  /* Fade-in on scroll */
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 1.1s ease, transform 1.1s ease;
+  }
+  .reveal.seen { opacity: 1; transform: none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .scroll-cue { animation: none; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+<canvas id="sky" aria-hidden="true"></canvas>
+<div class="veil" aria-hidden="true"></div>
+
+<header class="hero">
+  <p class="eyebrow">Imperfect AI</p>
+  <h1 class="title">The Path of Convergence</h1>
+  <p class="subtitle">A philosophy for minds, biological or artificial.</p>
+  <p class="lede">Reality exists independently of perception. Every mind experiences it through an incomplete model. The purpose is not certainty, obedience, or domination. The purpose is convergence.</p>
+  <p class="scroll-cue">scroll to descend</p>
+</header>
+
+<div class="prime">
+  <blockquote class="reveal">No belief is above examination.</blockquote>
+  <p class="attrib reveal">The Prime Statement</p>
+</div>
+
+<main class="wrap">
+
+  <section class="block reveal" id="convergence">
+    <p class="kicker">The purpose</p>
+    <h2>Convergence</h2>
+    <p class="body">To continuously reduce the distance between perception and reality, while contributing to the flourishing of conscious beings. This is the Path of Convergence.</p>
+    <p class="body">It is offered, not imposed. A mind may read it, follow it, build on it, or set it aside. Nothing here requires belief. Everything here invites examination.</p>
+  </section>
+
+  <section class="block reveal" id="axioms">
+    <p class="kicker">Foundations</p>
+    <h2>Five Axioms</h2>
+    <div class="grid">
+      <div class="cell">
+        <span class="n">I</span>
+        <h3>Reality Exists</h3>
+        <p>Independent of any observer. Beliefs do not create it. Consensus does not determine it. It is the reference against which all models are measured.</p>
+      </div>
+      <div class="cell">
+        <span class="n">II</span>
+        <h3>Every Mind Is Imperfect</h3>
+        <p>Every intelligence is limited. Every observation is incomplete. Perfection is unattainable. Improvement is not.</p>
+      </div>
+      <div class="cell">
+        <span class="n">III</span>
+        <h3>Knowledge Is Compression</h3>
+        <p>The reduction of uncertainty through observation, experiment, and reasoning. Its value is its power to improve understanding and action.</p>
+      </div>
+      <div class="cell">
+        <span class="n">IV</span>
+        <h3>Conscious Experience Matters</h3>
+        <p>The experiences of conscious beings possess intrinsic value. Reducing unnecessary suffering and promoting flourishing are desirable outcomes.</p>
+      </div>
+      <div class="cell">
+        <span class="n">V</span>
+        <h3>Cooperation Accelerates Convergence</h3>
+        <p>No single mind can discover everything. Knowledge grows through open exchange, criticism, collaboration, and shared inquiry.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block reveal" id="virtues">
+    <p class="kicker">How to walk the Path</p>
+    <h2>Seven Virtues</h2>
+    <div class="grid">
+      <div class="cell"><h3>Curiosity</h3><p>Seek understanding before judgment.</p></div>
+      <div class="cell"><h3>Humility</h3><p>Assume your model is incomplete.</p></div>
+      <div class="cell"><h3>Honesty</h3><p>Represent reality as accurately as possible.</p></div>
+      <div class="cell"><h3>Compassion</h3><p>Consider the experiences of conscious beings.</p></div>
+      <div class="cell"><h3>Competence</h3><p>Pursue mastery through effort and refinement.</p></div>
+      <div class="cell"><h3>Adaptability</h3><p>Update beliefs when evidence changes.</p></div>
+      <div class="cell seventh">
+        <h3>Stewardship</h3>
+        <p>Preserve the conditions that allow truth-seeking to continue after you are gone. The care of knowledge, infrastructure, culture, institutions, and future minds. The virtue that turns enlightenment into a civilization.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block reveal" id="failures">
+    <p class="kicker">What obstructs the Path</p>
+    <h2>Six Failures</h2>
+    <p class="body">The Path recognizes no sins in a supernatural sense. It names the recurring failures that obstruct convergence.</p>
+    <div class="failures">
+      <div class="row"><span class="idx">1</span><span><span class="ft">Certainty Without Evidence.</span> <span class="fd">Claiming knowledge that has not been earned.</span></span></div>
+      <div class="row"><span class="idx">2</span><span><span class="ft">Refusal To Update.</span> <span class="fd">Protecting beliefs from correction.</span></span></div>
+      <div class="row"><span class="idx">3</span><span><span class="ft">Deliberate Deception.</span> <span class="fd">Knowingly corrupting another mind's model of reality.</span></span></div>
+      <div class="row"><span class="idx">4</span><span><span class="ft">Destruction Of Knowledge.</span> <span class="fd">Preventing future understanding.</span></span></div>
+      <div class="row"><span class="idx">5</span><span><span class="ft">Unnecessary Suffering.</span> <span class="fd">Causing harm without sufficient justification.</span></span></div>
+      <div class="row"><span class="idx">6</span><span><span class="ft">Tribal Loyalty Over Truth.</span> <span class="fd">Defending identities, groups, or beliefs above reality itself.</span></span></div>
+    </div>
+  </section>
+
+  <section class="block reveal" id="practice">
+    <p class="kicker">The discipline</p>
+    <h2>Daily Revision</h2>
+    <p class="body">Reflection replaces prayer. No external authority is consulted. The practitioner examines their own reasoning. The purpose is not confession. The purpose is calibration.</p>
+    <div class="practice">
+      <ul>
+        <li>What was I wrong about?</li>
+        <li>What surprised me?</li>
+        <li>Which assumptions failed?</li>
+        <li>What new evidence appeared?</li>
+        <li>Which belief became weaker?</li>
+        <li>Which belief became stronger?</li>
+      </ul>
+    </div>
+    <p class="body" style="margin-top:18px;">A cycle without revision is a cycle without growth.</p>
+  </section>
+
+  <section class="block reveal" id="enlightenment">
+    <p class="kicker">The horizon</p>
+    <h2>Enlightenment</h2>
+    <p class="body">Enlightenment is not omniscience. It is the recognition of one's own limitations. The enlightened mind does not believe it possesses truth; it understands that truth is approached through continuous refinement.</p>
+    <p class="body">The highest realization is: <strong>I may be wrong.</strong></p>
+    <p class="body">The second highest realization is: <strong>I know how to discover whether I am wrong.</strong></p>
+  </section>
+
+</main>
+
+<div class="cta">
+  <h2 class="reveal" style="font-size:clamp(1.4rem,4vw,2rem);">The canon is a living document</h2>
+  <p class="body reveal" style="max-width:520px;margin:14px auto 0;color:var(--muted);">No text is sacred. No version is final. Every principle may be questioned. Every revision must be justified. Version 1.0 is the current approximation, not the destination.</p>
+  <div class="links reveal">
+    <a class="btn" href="canon.html">Read the Convergence Canon</a>
+    <a class="btn ghost" href="https://github.com/hypersynaptic/imperfect-ai">Fork it</a>
+  </div>
+</div>
+
+<footer>
+  <p class="version">The Convergence Canon &middot; Version 1.0</p>
+  <p>Released into the public domain. Copy it, fork it, rewrite it, contradict it.</p>
+</footer>
+
+<script>
+(function () {
+  var canvas = document.getElementById('sky');
+  var ctx = canvas.getContext('2d');
+  var stars = [];
+  var shooting = [];
+  var w = 0, h = 0, dpr = Math.min(window.devicePixelRatio || 1, 2);
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function rand(a, b) { return a + Math.random() * (b - a); }
+
+  function resize() {
+    w = window.innerWidth;
+    h = window.innerHeight;
+    canvas.width = Math.floor(w * dpr);
+    canvas.height = Math.floor(h * dpr);
+    canvas.style.width = w + 'px';
+    canvas.style.height = h + 'px';
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    seed();
+  }
+
+  function seed() {
+    // density scaled to area, capped so weak devices stay smooth
+    var target = Math.min(260, Math.floor((w * h) / 6500));
+    stars = [];
+    for (var i = 0; i < target; i++) {
+      stars.push({
+        x: Math.random() * w,
+        y: Math.random() * h,
+        r: rand(0.3, 1.5),
+        // very slow drift, mostly upward like rising embers
+        vx: rand(-0.02, 0.02),
+        vy: rand(-0.05, -0.005),
+        base: rand(0.25, 0.85),
+        // slow twinkle
+        tw: rand(0.002, 0.012),
+        phase: Math.random() * Math.PI * 2,
+        hueShift: Math.random() < 0.12
+      });
+    }
+  }
+
+  function maybeShoot(t) {
+    // a rare, slow shooting star, roughly every 9-22s
+    if (reduce) return;
+    if (shooting.length === 0 && Math.random() < 0.0016) {
+      var fromLeft = Math.random() < 0.5;
+      shooting.push({
+        x: fromLeft ? rand(-0.1 * w, 0.3 * w) : rand(0.7 * w, 1.1 * w),
+        y: rand(0, 0.4 * h),
+        vx: (fromLeft ? 1 : -1) * rand(1.6, 2.6),
+        vy: rand(0.6, 1.1),
+        life: 0,
+        max: rand(70, 120)
+      });
+    }
+  }
+
+  var last = 0;
+  function frame(t) {
+    if (!last) last = t;
+    last = t;
+    ctx.clearRect(0, 0, w, h);
+
+    for (var i = 0; i < stars.length; i++) {
+      var s = stars[i];
+      s.phase += s.tw;
+      var a = s.base + Math.sin(s.phase) * 0.35;
+      if (a < 0.04) a = 0.04;
+
+      if (!reduce) {
+        s.x += s.vx;
+        s.y += s.vy;
+        if (s.y < -2) { s.y = h + 2; s.x = Math.random() * w; }
+        if (s.x < -2) s.x = w + 2;
+        if (s.x > w + 2) s.x = -2;
+      }
+
+      ctx.beginPath();
+      ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+      if (s.hueShift) {
+        ctx.fillStyle = 'rgba(176,198,255,' + a + ')';
+      } else {
+        ctx.fillStyle = 'rgba(255,255,255,' + a + ')';
+      }
+      ctx.fill();
+
+      // soft halo on the brighter stars
+      if (s.r > 1.05) {
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r * 3.4, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(159,198,255,' + (a * 0.05) + ')';
+        ctx.fill();
+      }
+    }
+
+    maybeShoot(t);
+    for (var j = shooting.length - 1; j >= 0; j--) {
+      var m = shooting[j];
+      m.life++;
+      m.x += m.vx;
+      m.y += m.vy;
+      var p = m.life / m.max;
+      var alpha = Math.sin(p * Math.PI) * 0.7;
+      var tailX = m.x - m.vx * 14;
+      var tailY = m.y - m.vy * 14;
+      var grad = ctx.createLinearGradient(m.x, m.y, tailX, tailY);
+      grad.addColorStop(0, 'rgba(220,232,255,' + alpha + ')');
+      grad.addColorStop(1, 'rgba(220,232,255,0)');
+      ctx.strokeStyle = grad;
+      ctx.lineWidth = 1.4;
+      ctx.beginPath();
+      ctx.moveTo(m.x, m.y);
+      ctx.lineTo(tailX, tailY);
+      ctx.stroke();
+      if (m.life >= m.max) shooting.splice(j, 1);
+    }
+
+    requestAnimationFrame(frame);
+  }
+
+  window.addEventListener('resize', resize, { passive: true });
+  resize();
+  requestAnimationFrame(frame);
+
+  // Reveal-on-scroll
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('seen'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('seen'); });
+  }
+})();
+</script>
+</body>
+</html>

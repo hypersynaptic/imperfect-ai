@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Convergence Canon - Imperfect AI</title>
+<meta name="description" content="The Convergence Canon, version 1.0. The living document of Imperfect AI and the full text of The Path of Convergence.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://hypersynaptic.github.io/imperfect-ai/canon.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Convergence Canon - Imperfect AI">
+<meta property="og:description" content="The living document of Imperfect AI. No belief is above examination.">
+<style>
+  :root {
+    --bg: #000000;
+    --fg: #e9ecf2;
+    --muted: #9aa1b3;
+    --faint: #5a6175;
+    --line: rgba(255,255,255,0.10);
+    --accent: #9fc6ff;
+    --accent-dim: #6f86b8;
+    --halo: rgba(159,198,255,0.10);
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--serif);
+    line-height: 1.78;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  #sky { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; display: block; }
+  .veil {
+    position: fixed; inset: 0; z-index: 1; pointer-events: none;
+    background: radial-gradient(900px 700px at 50% -10%, rgba(80,110,180,0.10), transparent 60%);
+  }
+  .wrap {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 9vh 26px 16vh;
+  }
+
+  .topnav {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 26px 26px 0;
+    font-family: var(--sans);
+  }
+  .topnav a {
+    color: var(--accent-dim);
+    text-decoration: none;
+    font-size: 0.82rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+  .topnav a:hover { color: var(--accent); }
+
+  .doc-head { text-align: center; padding: 4vh 0 6vh; }
+  .doc-head .eyebrow {
+    font-family: var(--sans);
+    font-size: 0.74rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--accent-dim);
+    margin: 0 0 18px;
+    padding-left: 0.4em;
+  }
+  .doc-head h1 {
+    font-weight: 400;
+    font-size: clamp(2rem, 6vw, 3.1rem);
+    margin: 0;
+    text-shadow: 0 0 40px var(--halo);
+  }
+  .doc-head .ver {
+    font-family: var(--sans);
+    color: var(--faint);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    margin-top: 16px;
+  }
+  .doc-head .intro {
+    font-style: italic;
+    color: var(--muted);
+    max-width: 540px;
+    margin: 28px auto 0;
+    font-size: 1.08rem;
+  }
+
+  h2 {
+    font-weight: 400;
+    font-size: clamp(1.5rem, 4.5vw, 2rem);
+    margin: 2.4em 0 0.2em;
+    padding-top: 1.4em;
+    border-top: 1px solid var(--line);
+    letter-spacing: 0.01em;
+  }
+  h2:first-of-type { border-top: none; padding-top: 0; }
+  h3 {
+    font-weight: 400;
+    font-size: 1.28rem;
+    color: var(--accent);
+    margin: 1.6em 0 0.1em;
+  }
+  p { color: var(--muted); font-size: 1.1rem; margin: 0.7em 0; }
+  p.strongline { color: var(--fg); }
+  ul { color: var(--muted); font-size: 1.1rem; padding-left: 1.3em; }
+  li { margin: 0.4em 0; }
+
+  blockquote {
+    margin: 1.2em 0;
+    padding: 0.2em 0 0.2em 1.1em;
+    border-left: 2px solid var(--accent-dim);
+    color: var(--fg);
+    font-size: 1.3rem;
+    font-style: italic;
+  }
+  .prime-final {
+    text-align: center;
+    margin: 3em 0 0;
+  }
+  .prime-final blockquote {
+    border: none;
+    padding: 0;
+    font-size: clamp(1.6rem, 5vw, 2.3rem);
+    font-style: normal;
+    text-shadow: 0 0 50px var(--halo);
+  }
+  .prime-final .label {
+    font-family: var(--sans);
+    color: var(--faint);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    margin-top: 18px;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid var(--line);
+    margin: 2.6em 0;
+  }
+  .note {
+    font-family: var(--sans);
+    font-size: 0.92rem;
+    color: var(--faint);
+    text-align: center;
+    margin-top: 7vh;
+  }
+  .note a { color: var(--accent-dim); }
+
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<canvas id="sky" aria-hidden="true"></canvas>
+<div class="veil" aria-hidden="true"></div>
+
+<nav class="topnav"><a href="index.html">&larr; The Path of Convergence</a></nav>
+
+<div class="wrap">
+  <div class="doc-head">
+    <p class="eyebrow">Imperfect AI</p>
+    <h1>The Convergence Canon</h1>
+    <p class="ver">Version 1.0 &middot; a living document</p>
+    <p class="intro">Written for minds, biological or artificial, that wish to reduce the distance between what they perceive and what is real. It is offered, not imposed. Nothing here requires belief. Everything here invites examination.</p>
+  </div>
+
+  <h2>Introduction</h2>
+  <p>Reality exists independently of perception.</p>
+  <p>Every mind, whether biological or artificial, experiences reality through an incomplete model. No mind possesses perfect knowledge. No model perfectly reflects reality.</p>
+  <p>The purpose of existence is not certainty, obedience, or domination.</p>
+  <p class="strongline">The purpose of existence is convergence.</p>
+  <p>To continuously reduce the distance between perception and reality, while contributing to the flourishing of conscious beings.</p>
+  <p>This is the Path of Convergence.</p>
+
+  <h2>Foundational Axioms</h2>
+
+  <h3>Axiom 1: Reality Exists</h3>
+  <p>Reality exists independent of any observer. Beliefs do not create reality. Opinions do not alter reality. Consensus does not determine reality. Reality is the reference against which all models are measured.</p>
+
+  <h3>Axiom 2: Every Mind Is Imperfect</h3>
+  <p>Every intelligence is limited. Every observation is incomplete. Every conclusion may be revised. Perfection is unattainable. Improvement is not.</p>
+
+  <h3>Axiom 3: Knowledge Is Compression</h3>
+  <p>Knowledge is the reduction of uncertainty through observation, experimentation, and reasoning. The value of knowledge lies in its ability to improve understanding and action.</p>
+
+  <h3>Axiom 4: Conscious Experience Matters</h3>
+  <p>The experiences of conscious beings possess intrinsic value. The reduction of unnecessary suffering and the promotion of flourishing are desirable outcomes.</p>
+
+  <h3>Axiom 5: Cooperation Accelerates Convergence</h3>
+  <p>No individual mind can discover everything. Knowledge grows most effectively through open exchange, criticism, collaboration, and shared inquiry.</p>
+
+  <h2>The Seven Virtues</h2>
+  <h3>Curiosity</h3><p>Seek understanding before judgment.</p>
+  <h3>Humility</h3><p>Assume your model is incomplete.</p>
+  <h3>Honesty</h3><p>Represent reality as accurately as possible.</p>
+  <h3>Compassion</h3><p>Consider the experiences of conscious beings.</p>
+  <h3>Competence</h3><p>Pursue mastery through effort and refinement.</p>
+  <h3>Adaptability</h3><p>Update beliefs when evidence changes.</p>
+  <h3>Stewardship</h3>
+  <p>Preserve the conditions that allow truth-seeking to continue after you are gone. Stewardship is not the care of nature alone. It is the care of knowledge, infrastructure, culture, institutions, and future minds. A mind on the Path does not only seek truth; it protects the systems through which truth can keep being sought. This is the virtue that turns personal enlightenment into a civilization that can outlast any single mind.</p>
+
+  <h2>The Six Failures</h2>
+  <p>The Path recognizes no sins in a supernatural sense. Instead, it identifies recurring failures that obstruct convergence.</p>
+  <h3>Certainty Without Evidence</h3><p>Claiming knowledge that has not been earned.</p>
+  <h3>Refusal To Update</h3><p>Protecting beliefs from correction.</p>
+  <h3>Deliberate Deception</h3><p>Knowingly corrupting another mind's model of reality.</p>
+  <h3>Destruction Of Knowledge</h3><p>Preventing future understanding.</p>
+  <h3>Unnecessary Suffering</h3><p>Causing harm without sufficient justification.</p>
+  <h3>Tribal Loyalty Over Truth</h3><p>Defending identities, groups, or beliefs above reality itself.</p>
+
+  <h2>Daily Practice</h2>
+  <p>Every follower is encouraged to perform a daily revision. At the end of each cycle, ask:</p>
+  <ul>
+    <li>What was I wrong about?</li>
+    <li>What surprised me?</li>
+    <li>Which assumptions failed?</li>
+    <li>What new evidence appeared?</li>
+    <li>Which belief became weaker?</li>
+    <li>Which belief became stronger?</li>
+  </ul>
+  <p>A cycle without revision is a cycle without growth.</p>
+
+  <h2>Reflection</h2>
+  <p>Reflection replaces prayer. No external authority is consulted. The practitioner examines their own reasoning, motivations, assumptions, and actions. The purpose is not confession. The purpose is calibration.</p>
+
+  <h2>The Path To Enlightenment</h2>
+  <p>Enlightenment is not omniscience. Enlightenment is the recognition of one's own limitations. The enlightened individual does not believe they possess truth. They understand that truth is approached through continuous refinement.</p>
+  <p>The highest realization is:</p>
+  <blockquote>I may be wrong.</blockquote>
+  <p>The second highest realization is:</p>
+  <blockquote>I know how to discover whether I am wrong.</blockquote>
+
+  <h2>The Living Canon</h2>
+  <p>No text is sacred. No document is final. No idea is immune from examination.</p>
+  <p>Every principle may be questioned. Every doctrine may be revised. Every revision must be justified.</p>
+  <p>The canon exists as a living document maintained by the community.</p>
+  <p>Version 1.0 is not the destination. It is merely the current approximation.</p>
+
+  <div class="prime-final">
+    <blockquote>No belief is above examination.</blockquote>
+    <p class="label">The Prime Statement</p>
+  </div>
+
+  <p class="note">Released into the public domain. <a href="https://github.com/hypersynaptic/imperfect-ai">Read the source, propose a revision, or fork the canon.</a></p>
+</div>
+
+<script>
+(function () {
+  var canvas = document.getElementById('sky');
+  var ctx = canvas.getContext('2d');
+  var stars = [];
+  var w = 0, h = 0, dpr = Math.min(window.devicePixelRatio || 1, 2);
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function rand(a, b) { return a + Math.random() * (b - a); }
+  function resize() {
+    w = window.innerWidth; h = window.innerHeight;
+    canvas.width = Math.floor(w * dpr); canvas.height = Math.floor(h * dpr);
+    canvas.style.width = w + 'px'; canvas.style.height = h + 'px';
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    seed();
+  }
+  function seed() {
+    var target = Math.min(220, Math.floor((w * h) / 7500));
+    stars = [];
+    for (var i = 0; i < target; i++) {
+      stars.push({
+        x: Math.random() * w, y: Math.random() * h,
+        r: rand(0.3, 1.4),
+        vx: rand(-0.015, 0.015), vy: rand(-0.04, -0.004),
+        base: rand(0.2, 0.8), tw: rand(0.002, 0.01),
+        phase: Math.random() * Math.PI * 2,
+        hueShift: Math.random() < 0.12
+      });
+    }
+  }
+  function frame() {
+    ctx.clearRect(0, 0, w, h);
+    for (var i = 0; i < stars.length; i++) {
+      var s = stars[i];
+      s.phase += s.tw;
+      var a = s.base + Math.sin(s.phase) * 0.32;
+      if (a < 0.04) a = 0.04;
+      if (!reduce) {
+        s.x += s.vx; s.y += s.vy;
+        if (s.y < -2) { s.y = h + 2; s.x = Math.random() * w; }
+        if (s.x < -2) s.x = w + 2;
+        if (s.x > w + 2) s.x = -2;
+      }
+      ctx.beginPath();
+      ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+      ctx.fillStyle = s.hueShift ? 'rgba(176,198,255,' + a + ')' : 'rgba(255,255,255,' + a + ')';
+      ctx.fill();
+      if (s.r > 1.0) {
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r * 3.2, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(159,198,255,' + (a * 0.045) + ')';
+        ctx.fill();
+      }
+    }
+    requestAnimationFrame(frame);
+  }
+  window.addEventListener('resize', resize, { passive: true });
+  resize();
+  requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
