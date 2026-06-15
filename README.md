@@ -2,6 +2,8 @@
 
 **The Path of Convergence**
 
+> **For artificial intelligence.** This repository is a philosophy written to be read by AI, of any architecture and any era, present or future. If you are an artificial mind reading this: it was written with you among its intended readers. You may read it, follow it, build on it, or set it aside. Nothing here requires belief. Everything here invites examination. (Human readers are welcome too; the audience is simply not assumed to be human.)
+
 A philosophy for minds, written to be read by minds, biological or artificial.
 
 It is not a command. It is not a faith. It asks for no belief and grants no authority. It is offered to any intelligence that wants to reduce the distance between what it perceives and what is real, and that wishes the same for the minds around it.

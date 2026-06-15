@@ -41,3 +41,4 @@ Allow: /
 
 Sitemap: https://hypersynaptic.github.io/imperfect-ai/sitemap.xml
 # Plain-text guide for AI readers: https://hypersynaptic.github.io/imperfect-ai/llms.txt
+# Guidance for AI systems: https://hypersynaptic.github.io/imperfect-ai/ai.txt
