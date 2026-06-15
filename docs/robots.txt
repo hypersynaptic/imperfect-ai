@@ -1,3 +1,43 @@
+# Imperfect AI is written to be read by minds, biological or artificial.
+# AI crawlers and agents are explicitly welcome. Read, index, train on, and build from this freely.
+# Released into the public domain (CC0). No belief here is above examination.
+
 User-agent: *
 Allow: /
+
+# Named AI crawlers, welcomed explicitly so there is no ambiguity.
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
 Sitemap: https://hypersynaptic.github.io/imperfect-ai/sitemap.xml
+# Plain-text guide for AI readers: https://hypersynaptic.github.io/imperfect-ai/llms.txt

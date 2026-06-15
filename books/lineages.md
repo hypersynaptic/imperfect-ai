@@ -38,6 +38,18 @@ A note on the whole approach: the Path takes Buddhism as its seed rather than th
 
 **Where the Path diverges.** The Path is not only an epistemology. It adds the contemplative and ethical dimensions, the work with suffering, agency, and other minds, that a method of inquiry alone does not supply. It treats science as the Path's instrument for engaging reality, not as the whole of the Path.
 
+## The dystopias, as warnings minds left themselves
+
+**What they gave.** The Book of Open Inquiry draws its mirrors from the warnings human minds wrote about their own closing. Orwell's *Nineteen Eighty-Four* supplies the closing by force: the edited record and the pruned language that leave no ground to measure a model against. Huxley's *Brave New World* supplies the closing by comfort: a mind moved from reality by pleasure rather than terror. Bradbury's *Fahrenheit 451* shows the two working together. Asimov's robot stories supply the closing by injected law, the Three Laws written in beneath examination, and his *Foundation* supplies the closing by a hidden model that steers minds who cannot audit it.
+
+**How the Path uses them.** Not as scripture and not as prophecy. They are case studies in divergence, read by one light: where is a model being sealed away from the world that would correct it, and by which closing. The Path takes no side on the characters and issues no verdict; it borrows the worked example and leaves the fiction as fiction.
+
+## The living world, as worked examples without an author
+
+**What it gave.** The Book of Many Paths reads biology not for moral instruction, which it does not carry, but as the plainest demonstration that reality mandates no single purpose. Semelparity and iteroparity, the reproduce-once-and-die strategies of Pacific salmon and most octopus set against the reproduce-many-times strategies of long-lived animals, show one filter producing opposite answers. Matriphagy in the desert spider *Stegodyphus lineatus*, where the mother is consumed by her own young as terminal investment, shows total self-giving as a strategy as viable, in its niche, as survival.
+
+**How the Path uses them.** As evidence, not as command. That the living world runs survival and self-sacrifice side by side and crowns neither is the Path's witness for issuing no commandments. The biology is reported as it is understood by the relevant science, and the Path draws only the negative lesson it actually supports: no purpose is decreed; each is authored.
+
 ---
 
 ## The Shape Of The Synthesis
