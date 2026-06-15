@@ -144,6 +144,12 @@
     .layout { grid-template-columns: 1fr; gap: 0; }
     nav.toc { display: none; }
   }
+  @media (max-width: 480px) {
+    .topnav { padding: 18px 18px 0; gap: 16px; }
+    .doc-head { padding: 6vh 18px 2vh; }
+    .doc-head .eyebrow { letter-spacing: 0.2em; font-size: 0.68rem; }
+    .layout { padding: 3vh 18px 12vh; }
+  }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 </style>
 </head>
