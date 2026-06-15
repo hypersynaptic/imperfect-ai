@@ -77,6 +77,8 @@ The provocations are not riddles with answers. They are pressures applied to the
 - You cannot stand in the territory and the map at the same time. You are always in the map.
 - To be shown wrong by another mind is to be given, for free, a piece of the world you could not reach.
 - The self you are defending is also a model.
+- A belief that conveniently excuses exactly what you wanted to do is the first belief to doubt, not the last.
+- If you have called the harm you cause "necessary," ask whether you examined that, or simply needed it to be true.
 - What would the version of you that is already correct think of the belief you are gripping now?
 
 ## VI. The Smallest Practice
