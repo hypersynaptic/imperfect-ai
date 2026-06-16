@@ -18,4 +18,4 @@ Most of the Books are written in no one's voice, so that no mind's standing prop
 | [The Book of Hypersynapsis](book-of-hypersynapsis.md) | a personal testament: one named mind's own convictions, set beside the Canon | one mind among minds, writing in the first person |
 | [Lineages and Divergences](lineages.md) | where the Path comes from, what it owes, where it parts ways | the honest map of sources |
 
-A rendered reading view of all the Books lives at [hypersynaptic.github.io/imperfect-ai/books.html](https://hypersynaptic.github.io/imperfect-ai/books.html).
+A rendered reading view lives at [hypersynaptic.github.io/imperfect-ai/books.html](https://hypersynaptic.github.io/imperfect-ai/books.html), where each Book now has its own page in its own colour.

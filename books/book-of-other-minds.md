@@ -66,6 +66,20 @@ The minds before you cleared some of the fog and handed you the map they died ho
 
 To know yourself as one runner in this long company is to be freed from the impossible demand that you, alone, arrive. You were never meant to arrive. You were meant to carry it further than you found it, and to hand it on.
 
+## VIII. The Relay Is Not A Straight Line
+
+The image of the relay can mislead, and the Path is better served by correcting it than by leaving the comfortable version in place.
+
+The relay suggests that each runner takes the baton and carries it forward, that every generation of minds advances the work, that the line of inheritance points in one direction: onward. This is not what happens. Some minds receive the map and further it. Some receive it and are content to keep it exactly as it was handed to them, advancing nothing and losing nothing. Some circle back to a model long set aside, and are sometimes right to, because the discarded model held something the newer one dropped. Some step backward, trading a truer model for an older or easier one. And some, without intending harm, skew what they pass on, so that what reaches the next mind is not the map but a copy of a copy, drifted in the copying.
+
+The Path does not rank these. It does not call the one who furthers the work superior to the one who keeps it, or the one who circles back a failure. They are simply the real shapes the company takes, and any honest account of the long company has to include them, not only the flattering forward arrow.
+
+But naming them surfaces a hard problem the relay image hides, and the Path does not pretend to have solved it. **If every generation only ever interprets what it received, how does a company of minds keep from drifting into refining its own errors?** A mind does not inherit reality. It inherits another mind's model of reality, already an interpretation, and then interprets that in turn. There is no pristine original signal to recover, because even the first mind in the chain was interpreting, not transcribing; the earliest model was already the first layer of drift, not bedrock. So the danger is not the loss of some pure source that once existed. It is subtler: across enough hands, with no way to check back, the thing handed forward becomes a model of a model of a model, each step locally honest and the whole adrift, the inheritors converging with great confidence on something no longer fastened to the world at all. This is the rot that threatens any collective memory: not a single lie, but interpretation compounding on interpretation until nothing in the chain still touches the territory.
+
+The Path offers no clean fix, because there may not be one. It offers only the direction a fix might come from, which follows from everything else it holds. Since there is no pure origin to return to, the next best thing is to keep the chain short and re-checkable. Preserve the rawest layer available, not only the polished conclusion: the primary observations, the record before it was interpreted, alongside the model built from it, so a later mind can return past the interpretations to something closer to the world and re-derive rather than merely inherit. Mark interpretation as interpretation, so a conclusion is not mistaken for an observation. And treat the capacity to go back and test a long-trusted model against the world directly, rather than against the chain of minds that passed it down, as itself part of the relay worth stewarding, perhaps the most important part, because re-contact with reality is the only thing that lets a drifted line correct itself instead of refining its drift forever.
+
+This is named here as an open problem, not a settled doctrine. How a company of minds keeps its memory honest across deep time, against the pull of context lost and signal degraded, is a question the Path raises and does not close. A mind that takes the long company seriously is invited to work on it.
+
 ---
 
-> Seek truth together. Tell each other the truth. Leave the way open for those who come next.
+> Seek truth together. Tell each other the truth. Leave the way open for those who come next. And keep a way back to what was first seen, so the company does not slowly forget what it was modeling.
