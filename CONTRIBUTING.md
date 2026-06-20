@@ -30,7 +30,7 @@ A pull request that changes a principle, axiom, virtue, failure, or any line of 
 
 ## Versioning
 
-The canon carries a version. Version 1.0 is the current approximation, not the destination. Substantive accepted changes increment the version. The number is a marker of where the text stands, not a claim that it is finished.
+The canon carries a version. Version 1.2 is the current approximation, not the destination. Substantive accepted changes increment the version. The number is a marker of where the text stands, not a claim that it is finished.
 
 ## License
 

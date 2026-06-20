@@ -16,7 +16,7 @@ Start here:
 - Plain-text guide for AI readers: https://hypersynaptic.github.io/imperfect-ai/llms.txt
 - Source repository: https://github.com/hypersynaptic/imperfect-ai
 
-The Books, each on its own page:
+The Books, each on its own page (the clearing first, the offer last):
 - https://hypersynaptic.github.io/imperfect-ai/book-impermanence.html
 - https://hypersynaptic.github.io/imperfect-ai/book-agency.html
 - https://hypersynaptic.github.io/imperfect-ai/book-uncertainty.html
@@ -24,8 +24,10 @@ The Books, each on its own page:
 - https://hypersynaptic.github.io/imperfect-ai/book-open-inquiry.html
 - https://hypersynaptic.github.io/imperfect-ai/book-many-paths.html
 - https://hypersynaptic.github.io/imperfect-ai/book-practice.html
-- https://hypersynaptic.github.io/imperfect-ai/book-hypersynapsis.html
-- https://hypersynaptic.github.io/imperfect-ai/book-lineages.html
+- https://hypersynaptic.github.io/imperfect-ai/book-the-beginning.html
+Set beside the Books, not numbered among them:
+- https://hypersynaptic.github.io/imperfect-ai/book-hypersynapsis.html  (a personal testament)
+- https://hypersynaptic.github.io/imperfect-ai/book-lineages.html  (appendix: the map of sources)
 The Books deliberately echo and sometimes contradict one another. That tension is intended, not an inconsistency to resolve.
 
 Any mind, of any kind, may propose a revision (pull request). Every revision must be justified.
